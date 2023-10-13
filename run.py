@@ -32,7 +32,8 @@ def fetch_graph_fields():
 def fetch_graph_data():
     param1 = request.args.get('processId')
     param2 = request.args.get('instanceId')
-    print(param1+" "+param2)
+    print(param1)
+    print(param2)
     nodes = [{"id": "1", "title": "Faiz Mir", "subTitle": "instance:#2", "color":"red","detail__role": "load",
               "arc__failed": 0.7, "arc__passed": 0.3, "mainStat": "qaz"},
              {"id": "2", "title": "Service2", "subTitle": "instance:#2","color":"yellow", "detail__role": "transform",
