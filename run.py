@@ -31,9 +31,9 @@ def fetch_graph_fields():
 @app.route('/api/graph/data')
 def fetch_graph_data():
 
-    nodes = [{"id": "1", "title": "Faiz Mir", "subTitle": "instance:#2", "detail__role": "load",
+    nodes = [{"id": "1", "title": "Faiz Mir", "subTitle": "instance:#2", "color":"red","detail__role": "load",
               "arc__failed": 0.7, "arc__passed": 0.3, "mainStat": "qaz"},
-             {"id": "2", "title": "Service2", "subTitle": "instance:#2", "detail__role": "transform",
+             {"id": "2", "title": "Service2", "subTitle": "instance:#2","color":"yellow", "detail__role": "transform",
               "arc__failed": 0.5, "arc__passed": 0.5, "mainStat": "qaz"},
              {"id": "3", "title": "Service3", "subTitle": "instance:#3", "detail__role": "extract",
               "arc__failed": 0.3, "arc__passed": 0.7, "mainStat": "qaz"},
@@ -46,7 +46,7 @@ def fetch_graph_data():
              {"id": "2", "source": "1", "target": "4", "mainStat": 5},
              {"id": "3", "source": "3", "target": "5", "mainStat": 70},
              {"id": "4", "source": "2", "target": "5", "mainStat": 100}]
-    result = {"nodes":[{"id":"root","title":"hello","color":"red"},{"id":"service:1","title":"service:1","color":"yellow"}],"edges":[{"id":"12133","source":"root","target":"service:1"}]}
+    result = {"nodes":nodes,"edges":edges}
     return jsonify(result)
 
 
