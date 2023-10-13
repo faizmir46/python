@@ -31,7 +31,7 @@ def fetch_graph_fields():
 @app.route('/api/graph/data')
 def fetch_graph_data():
 
-    nodes = [{"id": "1", "title": "Service1", "subTitle": "instance:#2", "detail__role": "load",
+    nodes = [{"id": "1", "title": "Faiz Mir", "subTitle": "instance:#2", "detail__role": "load",
               "arc__failed": 0.7, "arc__passed": 0.3, "mainStat": "qaz"},
              {"id": "2", "title": "Service2", "subTitle": "instance:#2", "detail__role": "transform",
               "arc__failed": 0.5, "arc__passed": 0.5, "mainStat": "qaz"},
