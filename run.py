@@ -46,7 +46,7 @@ def fetch_graph_data():
              {"id": "2", "source": "1", "target": "4", "mainStat": 5},
              {"id": "3", "source": "3", "target": "5", "mainStat": 70},
              {"id": "4", "source": "2", "target": "5", "mainStat": 100}]
-    result = {"nodes": nodes, "edges": edges}
+    result = {"nodes":[{"id":"root","title":"hello","color":"red"},{"id":"service:1","title":"service:1","color":"yellow"}],"edges":[{"id":"12133","source":"root","target":"service:1"}]}
     return jsonify(result)
 
 
