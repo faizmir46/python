@@ -31,16 +31,11 @@ def fetch_graph_fields():
 @app.route('/api/graph/data')
 def fetch_graph_data():
 
-    nodes = [{"id": "1", "title": "Faiz Mir", "subTitle": "instance:#2", "color":"red","detail__role": "load",
-              "arc__failed": 0.7, "arc__passed": 0.3, "mainStat": "qaz"},
-             {"id": "2", "title": "Service2", "subTitle": "instance:#2","color":"yellow", "detail__role": "transform",
-              "arc__failed": 0.5, "arc__passed": 0.5, "mainStat": "qaz"},
-             {"id": "3", "title": "Service3", "subTitle": "instance:#3", "detail__role": "extract",
-              "arc__failed": 0.3, "arc__passed": 0.7, "mainStat": "qaz"},
-             {"id": "4", "title": "Service3", "subTitle": "instance:#1", "detail__role": "transform",
-              "arc__failed": 0.5, "arc__passed": 0.5, "mainStat": "qaz"},
-             {"id": "5", "title": "Service4", "subTitle": "instance:#5", "detail__role": "transform",
-              "arc__failed": 0.5, "arc__passed": 0.5, "mainStat": "qaz"}]
+    nodes = [{"id": "1", "title": "Faiz Mir", "subTitle": "instance:#2", "color":"red"},
+             {"id": "2", "title": "Service2", "subTitle": "instance:#2","color":"yellow"},
+             {"id": "3", "title": "Service3", "subTitle": "instance:#3"},
+             {"id": "4", "title": "Service3", "subTitle": "instance:#1"},
+             {"id": "5", "title": "Service4", "subTitle": "instance:#5"}]
     edges = [{"id": "1", "source": "1", "target": "2", "mainStat": 53},
              {"id": "2", "source": "2", "target": "3", "mainStat": 53},
              {"id": "2", "source": "1", "target": "4", "mainStat": 5},
