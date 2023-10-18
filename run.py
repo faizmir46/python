@@ -16,7 +16,8 @@ def fetch_graph_fields():
                     {"field_name": "arc__passed",
                      "type": "number", "color": "green", "displayName": "Passed"},
                     {"field_name": "detail__role",
-                     "type": "string", "displayName": "Role"}]
+                     "type": "string", "displayName": "Role"},
+                     {"field_name","detail__*","type":"string"}]
     edges_fields = [
         {"field_name": "id", "type": "string"},
         {"field_name": "source", "type": "string"},
@@ -32,9 +33,9 @@ def fetch_graph_fields():
 def fetch_graph_data():
 
     nodes = [{"id": "1", "title": "Service1", "subTitle": "instance:#2", "detail__role": "load",
-              "arc__failed": 0.7, "arc__passed": 0.3, "mainStat": "qaz"},
+              "arc__failed": 0.7, "arc__passed": 0.3, "mainStat": "qaz","detail__*":"gfgdc"},
              {"id": "2", "title": "Service2", "subTitle": "instance:#2", "detail__role": "transform",
-              "arc__failed": 0.5, "arc__passed": 0.5, "mainStat": "qaz"},
+              "arc__failed": 0.5, "arc__passed": 0.5, "mainStat": "qaz","detail__*":"gfgdc"},
              {"id": "3", "title": "Service3", "subTitle": "instance:#3", "detail__role": "extract",
               "arc__failed": 0.3, "arc__passed": 0.7, "mainStat": "qaz"},
              {"id": "4", "title": "Service3", "subTitle": "instance:#1", "detail__role": "transform",
